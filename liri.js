@@ -17,7 +17,7 @@ var fs = require('fs');
 
 //require moment for node & utilize default format
 var moment = require('moment');
-
+moment().format();
 //require axios to pull BandsInTown and OMDB API data
 var axios = require('axios');
 
@@ -97,7 +97,7 @@ function concertThis(searchTerm){
             "\nConcert: "+searchTerm+
             "\nName of Venue: "+response.data[j].venue.name+
             "\nLocation of Venue: "+response.data[j].venue.city+
-            "\nDate of Event: "+moment(dataArray[0], "MM-DD-YYYY");
+            "\nDate of Event: "+moment(dataArray[0]).format('MM-DD-YYYY')
             console.log(concertReturn);
         }
     }).catch(function(error){
@@ -112,7 +112,19 @@ function doWhatItSays() {
             console.log(error);
         }
         var dataArray = data.split(',');
-        spotifyThisSong(dataArray[0], dataArray[1]);
+        console.log(dataArray);
+        if(dataArray[0]=='spotify-this-song') {
+        console.log(spotifyThisSong(dataArray[1]));
+        }
+        else if (dataArray[0]=='concert-this')
+        {
+        console.log(concertThis(dataArray[1]));
+        }
+        else if (dataArray[0]=='movie-this')
+        {
+        console.log(movieThis(dataArray[1]));
+        }
+        else return error;
     })
 }
 
