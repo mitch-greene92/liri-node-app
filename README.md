@@ -26,9 +26,9 @@ There are four commands that LIRI can use:
 
 **Step 4: Input your use for LIRI**
 
-**Examples:**
+*Examples:*
 
-Example 1: 'spotify-this-song'
+**Example 1: 'spotify-this-song'**
 
 command: `node liri.js spotify-this-song "song"`
 
@@ -38,7 +38,7 @@ Spotify will then return the 3 closest matching songs
 
 ---
 
-Example 2: 'movie-this'
+**Example 2: 'movie-this'**
 command: `node liri.js movie-this "movie"`
 
 Information about the movie from the OMDB API will show
@@ -47,7 +47,7 @@ Information about the movie from the OMDB API will show
 
 ---
 
-Example 3: 'concert-this'
+**Example 3: 'concert-this'**
 command: `node liri.js concert-this "artist"`
 
 Information about concerts and dates with that aritist will appear
@@ -56,7 +56,7 @@ Information about concerts and dates with that aritist will appear
 
 ---
 
-Example 4: 'do-what-it-says'
+**Example 4: 'do-what-it-says'**
 command: `node liri.js do-what-it-says`
 
 This command takes information in the `random.txt` file and separates it into an array and will do whatever command and search term is inside the file.
