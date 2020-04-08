@@ -7,7 +7,7 @@
 ---
 
 ## <h2>Overview/Purpose</h2>
-The Liri Node App aims to create a command line interface method to search for songs, artists, concerts in your area and movies utilizing a variety of APIs. The app also includes the ability to 
+The Liri Node App aims to create a command line interface method to search for songs, artists, concerts in your area and movies utilizing a variety of APIs. The app also includes the ability to import a txt file and perform commands from it.
 
 The app requires a user to utilize their .env with spotify and requires node, fs, axios, node spotify API, dotenv and moment to work properly. 
 
